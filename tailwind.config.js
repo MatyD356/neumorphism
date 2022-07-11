@@ -6,15 +6,20 @@ module.exports = {
   ],
   theme: {
     extend: {
-      borderColor: {
-        'nue': 'rgba(255, 255, 255, 0.20)'
-      },
       backgroundColor: {
-        'nue': '#DFECF4'
+        'nue': '#ECF0F3'
       },
       boxShadow: {
-        'nue': '-12px -12px 24px 0 rgba(255, 255, 255, 0.80), 12px 12px 24px 0 rgba(108, 141, 194, 0.50)',
-        'nueInset': 'inset -12px -12px 24px 0 rgba(255, 255, 255, 0.80), inset 12px 12px 24px 0 rgba(108, 141, 194, 0.50)'
+        'nue': `
+        -18px -18px 30px #FFF, 
+        18px 18px 30px #D1D9E6
+        `,
+        'nue-inset': `
+          0px 0px 30px #FFF, 
+          0px 0px 30px #D1D9E6,
+          inset -18px -18px 30px #FFF, 
+          inset 18px 18px 30px #D1D9E6
+        `,
 
       },
     },

@@ -1,12 +1,8 @@
-import Button from "./components/button/Button";
 import ThemeButton from "./components/themeButton/ThemeButton";
-import useDarkTheme from "./hooks/useDarkTheme";
 
 export default function App() {
-  const [darkTheme] = useDarkTheme()
   return (
     <div className={`
-    ${darkTheme ? 'dark' : ''}
     h-screen 
     bg-nue
     dark:bg-black-nue 

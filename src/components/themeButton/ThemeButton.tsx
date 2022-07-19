@@ -4,6 +4,7 @@ import moon from '../../assets/icons/moon.png'
 import { motion, Variants } from "framer-motion"
 import { useMemo, useState } from "react"
 import Button from "../button/Button"
+import Img from "../img/Img"
 
 export default function ThemeButton(){
 
@@ -36,12 +37,8 @@ export default function ThemeButton(){
             onAnimationComplete={()=>setDisable(false)}
             className={`absolute top-3 left-10 h-28 flex flex-col justify-between` }
         >
-        <div>
-            <img height={32} width={32} src={sun} />
-        </div>
-        <div>
-            <img height={32} width={32}  src={moon} />
-        </div>
+          <Img h={32} w={32} src={sun} />
+          <Img h={32} w={32} src={moon} />
         </motion.div>
         </Button>
     )

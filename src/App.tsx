@@ -1,3 +1,4 @@
+import Surface from "./components/surface/Surface";
 import ThemeButton from "./components/themeButton/ThemeButton";
 
 export default function App() {
@@ -8,24 +9,11 @@ export default function App() {
     dark:bg-black-nue 
     transition-colors
     duration-500
-    flex 
-    items-center`
+    flex`
     } >
-      <div className="
-      flex 
-      w-1/6 
-      h-5/6 
-      m-8 
-      bg-nue
-      dark:bg-black-nue 
-      rounded-xl
-      transition-all
-      shadow-nue
-      hover:shadow-nue-inset
-      dark:shadow-nue-black
-      dark:hover:shadow-nue-black-inset
-      duration-500">
-      </div>
+      <Surface>
+      <div>xd</div>
+      </Surface>
       <ThemeButton />
     </div>
   );

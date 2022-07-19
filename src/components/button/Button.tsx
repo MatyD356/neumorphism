@@ -1,8 +1,4 @@
-import { Children, ReactNode } from "react"
-
-type ButtonSize = {
-    sm : 16
-}
+import { ReactNode } from "react"
 
 interface ButtonProps {
     onClick?: () => void
@@ -15,8 +11,9 @@ export default function Button({onClick, children,classes}:ButtonProps){
         <div 
             onClick={onClick}
             className={`
-            flex
             p-4
+            m-8
+            flex
             bg-nue
             dark:bg-black-nue 
             rounded-xl

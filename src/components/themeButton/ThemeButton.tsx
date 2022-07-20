@@ -32,6 +32,7 @@ export default function ThemeButton() {
 
   return (
     <Surface
+      hover
       onClick={disable ? undefined : handleClick}
       classes="w-28 h-14 relative overflow-hidden">
       <motion.div

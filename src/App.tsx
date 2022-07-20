@@ -1,4 +1,4 @@
-import Surface from './components/surface/Surface';
+import Menu from './components/menu/Menu';
 import ThemeButton from './components/themeButton/ThemeButton';
 
 export default function App() {
@@ -11,10 +11,8 @@ export default function App() {
     transition-colors
     duration-500
     flex`}>
-      <Surface>
-        <div>xd</div>
-      </Surface>
       <ThemeButton />
+      <Menu />
     </div>
   );
 }

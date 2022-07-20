@@ -3,8 +3,8 @@ import sun from '../../assets/icons/sun.png'
 import moon from '../../assets/icons/moon.png'
 import { motion, Variants } from "framer-motion"
 import { useMemo, useState } from "react"
-import Button from "../button/Button"
 import Img from "../img/Img"
+import Surface from "../surface/Surface"
 
 export default function ThemeButton(){
 
@@ -29,17 +29,17 @@ export default function ThemeButton(){
     }
 
     return(
-        <Button onClick={disable ? undefined : handleClick} classes='w-28 h-14'>
+        <Surface onClick={disable ? undefined : handleClick} classes='w-28 h-14 relative overflow-hidden'>
         <motion.div 
             animate={darkTheme ? 'dark' : 'light'}
             variants={variants}
             transition={{duration: animationDuration}}
             onAnimationComplete={()=>setDisable(false)}
-            className={`absolute top-3 left-10 h-28 flex flex-col justify-between` }
+            className={`absolute top-4 left-10 h-28 flex flex-col justify-between` }
         >
           <Img h={32} w={32} src={sun} />
           <Img h={32} w={32} src={moon} />
         </motion.div>
-        </Button>
+        </Surface>
     )
 }

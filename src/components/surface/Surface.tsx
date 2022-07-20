@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-interface SurfaceProps{
+interface SurfaceProps {
   children: ReactNode;
   classes?: string;
-  onClick?: () => void
+  onClick?: () => void;
 }
 
-export default function Surface({children, classes, onClick} : SurfaceProps){
+export default function Surface({ children, classes, onClick }: SurfaceProps) {
   return (
-    <div 
+    <div
       onClick={onClick ? onClick : undefined}
       className={`
       p-8
@@ -24,7 +24,7 @@ export default function Surface({children, classes, onClick} : SurfaceProps){
       dark:hover:shadow-nue-black-inset
       ${classes ? classes : ''}
     `}>
-        {children}
+      {children}
     </div>
-  )
+  );
 }

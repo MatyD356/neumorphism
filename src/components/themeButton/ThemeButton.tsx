@@ -1,4 +1,3 @@
-import useDarkTheme from '../../hooks/useDarkTheme';
 import sun from '../../assets/icons/sun.png';
 import moon from '../../assets/icons/moon.png';
 import { motion, Variants } from 'framer-motion';
@@ -6,8 +5,12 @@ import { useMemo, useState } from 'react';
 import Img from '../img/Img';
 import Surface from '../surface/Surface';
 
-export default function ThemeButton() {
-  const [darkTheme, toggleTheme] = useDarkTheme();
+interface ThemeButtonProps {
+  darkTheme: boolean | null;
+  toggleTheme: () => void;
+}
+
+export default function ThemeButton({ darkTheme, toggleTheme }: ThemeButtonProps) {
   const initialTheme = useMemo(() => darkTheme, []);
   const [changeCounter, setChangeCounter] = useState(initialTheme ? 1 : 0);
   const [disable, setDisable] = useState(false);

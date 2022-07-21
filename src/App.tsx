@@ -1,7 +1,9 @@
 import Menu from './components/menu/Menu';
 import ThemeButton from './components/themeButton/ThemeButton';
+import useDarkTheme from './hooks/useDarkTheme';
 
 export default function App() {
+  const [darkTheme, toggleTheme] = useDarkTheme();
   return (
     <div
       className={`
@@ -11,8 +13,8 @@ export default function App() {
     transition-colors
     duration-500
     flex`}>
-      <ThemeButton />
-      <Menu />
+      <ThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
+      <Menu iconColor={darkTheme ? 'white' : 'black'} />
     </div>
   );
 }

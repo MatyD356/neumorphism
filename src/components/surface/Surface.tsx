@@ -13,7 +13,6 @@ export default function Surface({ children, classes, onClick, hover }: SurfacePr
       onClick={onClick ? onClick : undefined}
       className={`
       p-8
-      m-8
       bg-nue
       rounded-xl
       shadow-nue

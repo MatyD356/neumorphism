@@ -14,7 +14,7 @@ export default function App() {
     duration-500
     flex`}>
       <ThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
-      <Menu iconColor={darkTheme ? 'white' : 'black'} />
+      <Menu iconColor={darkTheme ? '#ECF0F3' : '#292D32'} />
     </div>
   );
 }

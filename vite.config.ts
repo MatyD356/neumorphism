@@ -5,5 +5,8 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svgr(), react(), eslint()]
+  plugins: [svgr(), react(), eslint()],
+  server: {
+    host: '0.0.0.0'
+  }
 });

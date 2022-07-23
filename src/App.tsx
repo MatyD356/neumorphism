@@ -1,9 +1,14 @@
-import Menu from './components/menu/Menu';
-import ThemeButton from './components/themeButton/ThemeButton';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
 import useDarkTheme from './hooks/useDarkTheme';
+import NoMatch from './view/404/NoMatch';
+import Bookmarks from './view/bookmarks/Bookmarks';
+import Home from './view/home/Home';
+import Write from './view/write/Write';
 
 export default function App() {
   const [darkTheme, toggleTheme] = useDarkTheme();
+
   return (
     <div
       className={`
@@ -13,8 +18,14 @@ export default function App() {
     transition-colors
     duration-500
     flex`}>
-      <ThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
-      <Menu iconColor={darkTheme ? '#ECF0F3' : '#292D32'} />
+      <Routes>
+        <Route path="/" element={<Layout darkTheme={darkTheme} toggleTheme={toggleTheme} />}>
+          <Route index element={<Home />} />
+          <Route path="bookmarks" element={<Bookmarks />} />
+          <Route path="write" element={<Write />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

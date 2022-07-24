@@ -10,24 +10,24 @@ module.exports = {
       },
       boxShadow: {
         nue: `
-        -18px -18px 30px #FFF, 
-        18px 18px 30px #D1D9E6
+        -4px -4px 10px #FFF, 
+        4px 4px 10px #D1D9E6
         `,
         'nue-inset': `
-          0px 0px 30px #FFF, 
-          0px 0px 30px #D1D9E6,
-          inset -18px -18px 30px #FFF, 
-          inset 18px 18px 30px #D1D9E6
+          0px 0px 10px #FFF, 
+          0px 0px 10px #D1D9E6,
+          inset -4px -4px 10px #FFF, 
+          inset 4px 4px 10px #D1D9E6
         `,
         'nue-black': `
-        -18px -18px 20px #30343A, 
-        18px 18px 20px #00000020
+        -4px -4px 10px #30343A, 
+        4px 4px 10px #00000020
         `,
         'nue-black-inset': `
-          0px 0px 20px #2A2D32,
-          0px 0px 20px #30343A, 
-          inset -18px -18px 20px #30343A, 
-          inset 18px 18px 20px #00000020
+          0px 0px 10px #2A2D32,
+          0px 0px 10px #30343A, 
+          inset -4px -4px 10px #30343A, 
+          inset 4px 4px 10px #00000020
         `
       }
     }

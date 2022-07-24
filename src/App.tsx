@@ -12,12 +12,12 @@ export default function App() {
   return (
     <div
       className={`
-    h-screen 
-    bg-nue
-    dark:bg-black-nue 
-    transition-colors
-    duration-500
-    flex`}>
+      min-h-screen
+          bg-nue
+          dark:bg-black-nue 
+          transition-colors
+          duration-500
+          flex`}>
       <Routes>
         <Route path="/" element={<Layout darkTheme={darkTheme} toggleTheme={toggleTheme} />}>
           <Route index element={<Home />} />

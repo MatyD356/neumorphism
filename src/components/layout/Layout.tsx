@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Menu from '../menu/Menu';
+import Surface from '../surface/Surface';
 import ThemeButton from '../themeButton/ThemeButton';
 
 export default function Layout({
@@ -12,13 +13,17 @@ export default function Layout({
   return (
     <div
       className={`
-    h-screen 
-    bg-nue
+    w-full
     dark:bg-black-nue 
     transition-colors
     duration-500
-    flex`}>
-      <ThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
+    flex
+    flex-col
+   `}>
+      <Surface square classes="flex justify-between items-center px-4 sticky top-0">
+        <h1 className="text-yellow-500 font-bold text-lg">TopBar</h1>
+        <ThemeButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
+      </Surface>
       <Outlet />
       <Menu darkTheme={darkTheme} />
     </div>

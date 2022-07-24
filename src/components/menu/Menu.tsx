@@ -11,12 +11,10 @@ interface MeunProps {
 
 export default function Menu({ darkTheme }: MeunProps) {
   return (
-    <div className="absolute left-0 right-0 bottom-0 ">
-      <Surface classes="flex justify-around rounded-none p-0">
-        <MenuButton to={ROUTES.HOME} darkTheme={darkTheme} Icon={Home} />
-        <MenuButton to={ROUTES.BOOKMARKS} darkTheme={darkTheme} Icon={Bookmarks} />
-        <MenuButton to={ROUTES.WRITE} darkTheme={darkTheme} Icon={Edit} />
-      </Surface>
-    </div>
+    <Surface flat transparent square classes="sticky bottom-0 flex justify-around p-2">
+      <MenuButton to={ROUTES.HOME} darkTheme={darkTheme} Icon={Home} />
+      <MenuButton to={ROUTES.BOOKMARKS} darkTheme={darkTheme} Icon={Bookmarks} />
+      <MenuButton to={ROUTES.WRITE} darkTheme={darkTheme} Icon={Edit} />
+    </Surface>
   );
 }
